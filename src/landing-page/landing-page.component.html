@@ -1,0 +1,12 @@
+@if (!noBuilderPageForUrl()) {
+  <builder-component
+    model="page"
+    (load)="onBuilderComponentLoad($event)"
+    (error)="onBuilderComponentError()"
+  >
+    <!-- Default content inside the tag shows while the builder content is fetching -->
+    <div class="spinner"></div>
+  </builder-component>
+} @else {
+  <app-page-not-found></app-page-not-found>
+}
